@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class JdbcDAO {
 	
+	// things are made easy using jdbcTemplate
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 public List<Person> findAll()

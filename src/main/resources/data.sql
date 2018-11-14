@@ -23,3 +23,11 @@ VALUES(1003, 'AC', 'MELBOURNE',sysdate());
 INSERT INTO PERSON
 (ID, NAME, LOCATION, DOB )
 VALUES(1004, 'BABU', 'Sydney',sysdate());
+
+INSERT INTO PERSON
+(ID, NAME, LOCATION, DOB )
+VALUES(1005, 'Andrew', 'Melbourne',sysdate());
+
+INSERT INTO PERSON
+(ID, NAME, LOCATION, DOB )
+VALUES(1006, 'Gavin', 'Sydney',sysdate());

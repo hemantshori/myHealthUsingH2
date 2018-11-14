@@ -2,6 +2,7 @@ package com.shori.myHealthUsingH2;
 
 import java.sql.Date;
 
+// my plain pojo
 public class Person {
 
 	int id;
