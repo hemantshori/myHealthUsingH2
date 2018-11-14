@@ -19,4 +19,36 @@ public List<Person> findAll()
 	
 }
 
+
+public Person findById(int id)
+{
+//	return jdbcTemplate.query("select * from person", 
+//			new BeanPropertyRowMapper<Person>(Person.class));
+	return jdbcTemplate.queryForObject("select * from person Where id = ?", new Object[] {id},
+			new BeanPropertyRowMapper<Person>(Person.class));
+	
+}
+
+
+
+
+public Person findByName(String name)
+{
+
+	return jdbcTemplate.queryForObject("select * from person Where name = ?", new Object[] {name},
+			new BeanPropertyRowMapper<Person>(Person.class));
+	
+}
+
+public int deleteById(int id)
+{
+
+	return jdbcTemplate.update("delete from person Where id = ?", 
+			new Object[] {id});
+		
+	
+}
+
+
+
 }

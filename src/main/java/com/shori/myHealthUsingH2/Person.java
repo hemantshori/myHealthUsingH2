@@ -2,6 +2,8 @@ package com.shori.myHealthUsingH2;
 
 import java.sql.Date;
 
+import org.springframework.stereotype.Component;
+@Component
 // my plain pojo
 public class Person {
 

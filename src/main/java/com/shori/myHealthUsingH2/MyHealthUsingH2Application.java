@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.util.Assert;
 
 
-@SpringBootApplication
+@SpringBootApplication  //eables auto config
 public class MyHealthUsingH2Application implements ApplicationRunner{
 
 
@@ -27,8 +27,17 @@ public class MyHealthUsingH2Application implements ApplicationRunner{
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
     List<Person> resultsString = dao.findAll();
+    
+    Person id = dao.findById(1001);
+    Person name = dao.findByName("Gavin");
+    
+    int removeid = dao.deleteById(1006);
+    
 		
 		System.out.println(resultsString);
+		System.out.println(id);
+		System.out.println(name);
+		System.out.println("Successfully removed " +removeid);
 		
 		
 		
